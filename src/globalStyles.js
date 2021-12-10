@@ -41,6 +41,8 @@ const GlobalStyles = createGlobalStyle`
   input, button {
     border: none;
     outline: none;
+
+    cursor: pointer;
   }
 
   section {
