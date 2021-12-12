@@ -25,7 +25,7 @@ export const Way = styled.div`
     margin-bottom: 2em;
     border-radius: 50%;
 
-    background-color: var(--primary-color);
+    background-color: var(${(props) => props.inverse ? '--secondary-color' : '--primary-color'});
   }
 
   span {

@@ -5,6 +5,7 @@ import Pouplar from '../../Popular';
 import Partners from '../../Partners';
 import Notices from '../../Notices';
 import OurWay from '../../OurWay';
+import Footer from '../../Footer';
 import { Container } from './styles';
 
 function Home() {
@@ -17,6 +18,7 @@ function Home() {
       <Partners />
       <Notices />
       <OurWay />
+      <Footer />
     </Container>
   )
 }

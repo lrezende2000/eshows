@@ -41,7 +41,9 @@ const GlobalStyles = createGlobalStyle`
   input, button {
     border: none;
     outline: none;
+  }
 
+  input, button, a {
     cursor: pointer;
   }
 

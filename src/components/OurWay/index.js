@@ -15,7 +15,7 @@ function OurWay() {
           </div>
           <span>Artistas de Qualidade</span>
         </Way>
-        <Way>
+        <Way inverse>
           <div className="icon-wrapper">
             <BsCheckLg color="white" size={50} />
           </div>
