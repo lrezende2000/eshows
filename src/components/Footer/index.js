@@ -14,10 +14,10 @@ import {
   Socials
 } from './styles';
 
-function Footer() {
+function Footer({hideImage}) {
   return (
     <Container>
-      <Show />
+      {!hideImage && <Show />}
       <FooterStyled>
         <div className="logo" />
 

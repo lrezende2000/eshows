@@ -11,7 +11,11 @@ import { Container } from './styles';
 function Home() {
   return (
     <Container>
-      <Hero />
+      <Hero
+        showSearch
+        title="Encontre e música ao vivo rapidamente"
+        paragraph="ou utilize nosso <span>Produtor Eshows</span> para encontrar o melhor artista para seu evento"
+      />
       <Events />
       <Statistics />
       <Pouplar />

@@ -31,4 +31,8 @@ export const Container = styled.div`
     height: 20px;
     background-color: white;
   }
+
+  a:visited {
+    color: var(--text-light);
+  }
 `;
