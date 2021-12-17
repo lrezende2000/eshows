@@ -4,7 +4,7 @@ import Menu from '../Menu';
 import Search from '../Search';
 import { Container, SearchContainer } from './styles';
 
-function Hero({ title, paragraph, showSearch, showButton }) {
+function Hero({ title, paragraph, showSearch, showButton, height, children }) {
   const paragraphRef = useRef();
 
   useEffect(() => {
@@ -12,7 +12,7 @@ function Hero({ title, paragraph, showSearch, showButton }) {
   }, [paragraph]);
 
   return (
-    <Container>
+    <Container height={height}>
       <Menu />
 
       <SearchContainer>
@@ -23,6 +23,8 @@ function Hero({ title, paragraph, showSearch, showButton }) {
         <p ref={paragraphRef}></p>
 
         {showButton && <button>Quero fazer parte</button>}
+
+        {children}
       </SearchContainer>
     </Container>
   )

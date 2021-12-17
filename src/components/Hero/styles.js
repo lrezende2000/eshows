@@ -6,7 +6,7 @@ export const Container = styled.section`
   background-position: center;
   background-size: cover;
 
-  height: 85vh;
+  height: ${props => props.height ? props.height : '85vh'};
 `;
 
 export const SearchContainer = styled.div`
@@ -23,9 +23,9 @@ export const SearchContainer = styled.div`
     max-width: 50%;
   }
 
-  p {
+  > p {
     max-width: 35%;
-    margin: 3em 0;
+    margin: 1em 0;
 
     font-weight: 300;
     font-size: 1em;
@@ -36,7 +36,7 @@ export const SearchContainer = styled.div`
     }
   }
 
-  button {
+  > button {
     padding: .7em 2em;
     border: 2px solid white;
     border-radius: .5em;
@@ -48,4 +48,6 @@ export const SearchContainer = styled.div`
 
     background-color: var(--secondary-color);
   }
+  
+
 `;

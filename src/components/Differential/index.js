@@ -4,11 +4,21 @@ import { useEffect, useRef } from 'react';
 import { Container, ImageContainer, TextContainer } from './styles';
 
 function Differential({ inverse, title, subtitle, paragraph, children }) {
+  const titleRef = useRef();
   const subtitleRef = useRef();
 
   useEffect(() => {
-    subtitleRef.current.innerHTML = subtitle;
+    if (title) {
+      titleRef.current.innerHTML = title;
+    }
+  }, [title]);
+
+  useEffect(() => {
+    if (subtitle) {
+      subtitleRef.current.innerHTML = subtitle;
+    }
   }, [subtitle]);
+
 
   return (
     <Container inverse={inverse}>
@@ -18,18 +28,18 @@ function Differential({ inverse, title, subtitle, paragraph, children }) {
             <img width="100%" height="100%" src="/assets/party.jpeg" alt="Image" />
           </ImageContainer>
           <TextContainer>
-            <h2>{title}</h2>
-            <h3 ref={subtitleRef}></h3>
-            <p>{paragraph}</p>
+            <h2 ref={titleRef} />
+            <h3 ref={subtitleRef} />
+            {paragraph && <p>{paragraph}</p>}
             {children}
           </TextContainer>
         </>
       ) : (
         <>
           <TextContainer>
-            <h2>{title}</h2>
-            <h3 ref={subtitleRef}></h3>
-            <p>{paragraph}</p>
+            <h2 ref={titleRef} />
+            <h3 ref={subtitleRef} />
+            {paragraph && <p>{paragraph}</p>}
             {children}
           </TextContainer>
           <ImageContainer>
