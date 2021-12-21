@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const Container = styled.section`
+export const Container = styled.section``;
+
+export const Wrapper = styled.div`
   display: grid;
   grid-template-columns: ${(props => props.inverse ? '4fr 2fr' : '2fr 4fr')};
 
